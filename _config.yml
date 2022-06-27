@@ -131,8 +131,6 @@ author:
   weibo            :
   xing             :
   youtube          : "https://www.youtube.com/channel/UCkdBKlJ8fKHrfEM1FI6YkcA"
-
-
 # Reading Files
 include:
   - .htaccess
