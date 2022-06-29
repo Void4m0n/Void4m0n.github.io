@@ -22,7 +22,7 @@
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
-
+    
     &:hover {
       opacity: 1;
     }
@@ -38,7 +38,8 @@
 
   @include breakpoint($x-large) {
     width: calc(#{$right-sidebar-width} - 1em);
-  }
+    padding-right: 60px;  
+}
 
   > * {
     margin-top: 1em;
@@ -62,7 +63,6 @@
   }
 
   img {
-    width: 100%;
     
     &.emoji {
       width: 20px;
@@ -116,7 +116,7 @@
 
 .author__avatar {
   display: table-cell;
-  vertical-align: top;
+  vertical-align: middle;
   width: 36px;
   height: 36px;
 
@@ -127,7 +127,7 @@
   }
 
   img {
-    max-width: 110px;
+    max-width: 100%;
     border-radius: 50%;
 
     @include breakpoint($large) {
@@ -159,11 +159,12 @@
 
 .author__name {
   margin: 0;
-
+  
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 10px;
-  }
+    text-align: center;
+}
 }
 .sidebar .author__name {
   font-family: $sans-serif;
@@ -176,7 +177,8 @@
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 20px;
-  }
+    text-align: center;  
+}
 }
 
 .author__urls-wrapper {
@@ -196,6 +198,7 @@
 
   @include breakpoint($large) {
     display: block;
+    text-align: center;
   }
 
   button {
@@ -210,9 +213,10 @@
 .author__urls {
   display: none;
   position: absolute;
-  right: 0;
+  right: -30px;
   margin-top: 15px;
   padding: 10px;
+  padding-right: 40px;
   list-style-type: none;
   border: 1px solid $border-color;
   border-radius: $border-radius;
@@ -229,6 +233,7 @@
     display: block;
     position: relative;
     margin: 0;
+    right: 0;
     padding: 0;
     border: 0;
     background: transparent;
@@ -287,6 +292,12 @@
       text-decoration: underline;
     }
   }
+}
+
+
+.icon_custom{
+  width: 24px;
+  height: 24px;
 }
 
 /*

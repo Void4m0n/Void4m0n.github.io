@@ -1,12 +1,12 @@
 ---
 layout: single
-title: Hackeable II - Vulnhub
+title: <span class="vulnhub_azul">Hackeable II</span> - <span class="vulnhub_naranja">Vulnhub</span>
 excerpt: "La máquina elegida para este write up será Hackeable_II, una máquina sencilla, pero entretenida. Esta refuerza puntos básicos del hacking, como el reconocimiento basico con nmap,
 enumeración de directorios web, el uso de ftp vía Anonymous, establecimiento de una revershell entre el servidor y el atacante, crackeo de hashes con Jonh y escalada de privilegios por sudo."
 date: 2022-06-24
 classes: wide
 header:
-  teaser: /assets/images/Hackeable_II/flag.png
+  teaser: /assets/images/Hackeable_II/Hackeable_II_descripcion.png
   teaser_home_page: true
   icon: /assets/images/vulnhub.png
 categories:

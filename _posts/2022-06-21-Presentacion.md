@@ -1,17 +1,19 @@
 ---
 layout: single
-title: Presentacion del blog
+title: <span class="post">Presentacion del blog - POST</span>
 excerpt: "Mi nombre es Luis Miranda Sierra y estoy titulado en ASIR, tengo como objetivo volverme un experto en la ciberseguridad, enfocado hacia el pentesting y ethical hacking. Mi prioridad principal 
 es aprender para poder evolucionar de forma profesional en este sector."
 date: 2022-06-21
 classes: wide
 header:
-  teaser:  
+  teaser: /assets/images/presentacion/presentacion_descripcion.png
   teaser_home_page: true
   icon: 
 categories:
 - Estudios
-tags:  
+tags:
+- Presentacion
+- Whoami
 ---
 ## ¿Quién soy?
 

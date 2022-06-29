@@ -178,6 +178,7 @@
   align-items: center;
   min-height: $nav-height;
   background: $background-color;
+  font-size: 1.25em;
 
   a {
     display: block;
@@ -215,7 +216,7 @@
     display: flex;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end;
+    justify-content: center;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;

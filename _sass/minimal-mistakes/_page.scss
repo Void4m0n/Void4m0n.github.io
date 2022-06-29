@@ -70,7 +70,26 @@
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
-  }
+    text-align: center;
+
+    &:before{
+      content: "#>_ ";
+      font-weight: bolder;
+      letter-spacing: 1pt;
+      margin-right: .1rem;
+      color: rgb(255, 0, 116);
+      width: 1.3em;
+    }
+
+    &:after{
+      content: "";
+      font-weight: bolder;
+      margin-left: .1rem;
+      color: rgb(255, 0, 116);
+      width: 1.3em;
+    }
+}
+
 
   p,
   li,
