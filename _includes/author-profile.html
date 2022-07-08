@@ -27,16 +27,11 @@
   {% endif %}
 
   <div class="author__content">
-    <!--{% if author.home %}
+    {% if author.home %}
       <a href="{{ author_link }}"><h3 class="glitch author__name" itemprop="name">{{ author.name }}</h3></a>
     {% else %}
       <h3 class="glitch author__name" itemprop="name">{{ author.name }}</h3>
-    {% endif %}-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <h3 class="start">
-        <span class="end1"></span><span class="middle1">#ROOT_ACCESS</span>
-    	<span class="middle2">>Luis_Miranda_Sierra</span><span class="end2"></span>
-    </h3>
+    {% endif %}
     {% if author.bio %}
       <p class="author__bio" itemprop="description">
         {{ author.bio }}
