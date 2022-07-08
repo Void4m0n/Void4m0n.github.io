@@ -523,21 +523,21 @@ input[type="submit"],
   white-space: nowrap;
   overflow: hidden;    
   font-family: 'Source Code Pro', monospace;  
-  font-size: 28px;
+  font-size: 1em;
   color: rgba(255,255,255,.70);
 }
 
 /* Animation */
 .typing_animation {
-  animation: animated-text 4s steps(25,end) 1s 1 normal both,
-             animated-cursor 600ms steps(25,end) infinite;
+  animation: animated-text 2s steps(23,end) 1s 1 normal both,
+             animated-cursor 600ms steps(23,end) infinite;
 }
 
 /* text animation */
 
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 11em;}
+  to{width: 10.5em;}
 }
 
 /* cursor animations */
