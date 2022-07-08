@@ -401,7 +401,7 @@ input[type="submit"],
   background: #04101f;
   overflow:hidden;
   clip:rect(0,900px,0,0);
-  animation:noise-anim-2 2s infinite linear alternate-reverse;
+  animation:noise-anim-2 3s infinite linear alternate-reverse;
   width: 100%;
 }
 
@@ -415,7 +415,7 @@ input[type="submit"],
   background: #04101f;
   overflow:hidden;
   clip:rect(0,900px,0,0);
-  animation:noise-anim 2s infinite linear alternate-reverse;
+  animation:noise-anim 3s infinite linear alternate-reverse;
   width: 100%;
 }
 
@@ -512,4 +512,37 @@ input[type="submit"],
     100% {
         max-width: 0;
     }
+}
+
+/* typing animation */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+.typing_animation {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: rgba(255,255,255,.70);
+}
+
+/* Animation */
+.typing_animation {
+  animation: animated-text 4s steps(25,end) 1s 1 normal both,
+             animated-cursor 600ms steps(25,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 11em;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
 }
