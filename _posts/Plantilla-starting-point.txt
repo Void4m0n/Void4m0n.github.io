@@ -1,0 +1,60 @@
+---
+layout: single
+title: <span class="htb">Meow - Starting point - Hack The Box</span>
+excerpt: "En este post vamos a comenzar con las máquinas del starting point del tier 0, la primera es Meow y será la elegida para este primer write up.
+Me voy a centrar en el proceso de explotación ya que exiten diferentes preguntas las cuales no aportan elementos de valor, en el caso de que sean indispensables
+para llevar acabo la explotación citaré los recursos en el proceso."
+date: 2022-07-06
+classes: wide
+header:
+  teaser: /assets/images/Meow/Descripcion_meow.png
+  teaser_home_page: true
+  icon: /assets/images/hackthebox.png
+categories:
+  - Hack The Box
+  - Starting point
+  - Tier 0
+tags: 
+  - 
+  -
+---
+
+## Descripcion
+
+
+## Indice
+
+- [](#)
+
+## Respuestas
+
+### Pregunta 1
+
+
+### Pregunta 2
+
+
+### Pregunta 3
+
+
+### Pregunta 4
+
+
+### Pregunta 5
+
+
+
+### Pregunta 6
+
+
+### Pregunta 7
+
+
+### Pregunta 8
+
+
+
+### Bandera
+
+
+

