@@ -23,7 +23,7 @@ tags:
 A partir del día de hoy empezaré a realizar un write up diario de las máquinas retiradas de Hack the Box, es el turno de Lame, una máquina easy donde ganaremos acceso al sistema con permisos root
 explotando una vulnerabilidad de samba CVE-2007-2447.
 
-<p style="text-align:center;"><img src="../assets/images/Lame/Lame_descripcion.png"></p>
+<p style="text-align:center;"><img src="../assets/images/Lame/Lame_descripcion.png" style="max-width: 75%"></p>
 
 ## INDICE
 

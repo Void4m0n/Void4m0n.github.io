@@ -529,22 +529,60 @@ input[type="submit"],
   color: rgba(255,255,255,.70);
 }
 
+.typing_animation_2 {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1em;
+  color: rgba(255,255,255,.70);
+}
+
+.typing_animation_3 {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1em;
+  color: rgba(255,255,255,.70);
+}
+
 /* Animation */
 .typing_animation {
-  animation: animated-text 2s steps(23,end) 1s 1 normal both,
+  animation: animated-text 1s steps(23,end) 1s 1 normal both,
              animated-cursor 600ms steps(23,end) infinite;
+}
+
+.typing_animation_2 {  
+  animation: animated-text_2 1s steps(11,end) 2s 1 normal both,
+             animated-cursor 600ms steps(11,end) infinite;
+}
+
+.typing_animation_3 {
+  animation: animated-text_3 1s steps(17,end) 3s 1 normal both,
+             animated-cursor 600ms steps(17,end) infinite;
 }
 
 /* text animation */
 
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 10.5em;}
+  to{width: 11em;}
+}
+
+@keyframes animated-text_2{
+  from{width: 0;}
+  to{width: 6.5em;}
+}
+
+@keyframes animated-text_3{
+  from{width: 0;}
+  to{width: 8.5em;}
 }
 
 /* cursor animations */
 
 @keyframes animated-cursor{
-  from{border-right-color: rgba(0,255,0,.75);}
+  from{border-right-color: white;}
   to{border-right-color: transparent;}
 }
