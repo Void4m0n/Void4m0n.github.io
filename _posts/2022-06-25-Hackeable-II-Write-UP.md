@@ -34,7 +34,7 @@ enumeración de directorios web, el uso de ftp vía Anonymous, establecimiento d
 - [Reverse shell](#subimos-la-reverse-shell)
 - [Reconocimiento dentro del host](#reconocimiento-dentro-del-host)
 - [Identificación del hash](#tipo-de-hash)
-- [Cracking del hash con Jonh](#cracking-del-hash-con-Jonh)
+- [Cracking del hash con Jonh](#cracking-del-hash-con-jonh)
 - [Escalada de Privilegios](#escalada-de-privilegios)
 - [Conclusiones](#conclusiones)
 - [Autores y Descarga](#autores-y-descarga)
