@@ -20,9 +20,9 @@ title                    : "Luis Miranda Sierra"
 title_separator          : "-"
 name                     : "Luis"
 description              : "Blog sobre ciberseguridad"
-url                      : "https://luismirandasierra.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://void4m0n.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "Luismirandasierra/luismirandasierra.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "Void4m0n/Void4m0n.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 logo                     : # "/assets/images/masthead.png"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
@@ -114,7 +114,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "Luismirandasierra"
+  github           : "Void4m0n"
   gitlab           :
   google_plus      :
   keybase          :
