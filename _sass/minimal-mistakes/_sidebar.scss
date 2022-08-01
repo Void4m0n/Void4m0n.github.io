@@ -114,9 +114,11 @@
    Author profile and links
    ========================================================================== */
 
-.author__avatar {
+.author__avatar {  
   vertical-align: middle;
-  max-width: 100%;
+  display: table-cell;
+  width: 8em;
+  height: 8em;
 
   @include breakpoint($large) {
     display: block;
@@ -141,13 +143,14 @@
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
-  padding-top: 3em;
+  padding-top: 2em;
 
   @include breakpoint($large) {
     display: block;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 1em;
   }
 
   a {
@@ -188,7 +191,6 @@
   z-index: 10;
   position: relative;
   cursor: pointer;
-  padding-top: 3em;
  
   li:last-child {
     a {
