@@ -115,10 +115,8 @@
    ========================================================================== */
 
 .author__avatar {
-  display: table-cell;
   vertical-align: middle;
-  width: 36px;
-  height: 36px;
+  max-width: 100%;
 
   @include breakpoint($large) {
     display: block;
@@ -143,6 +141,7 @@
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
+  padding-top: 3em;
 
   @include breakpoint($large) {
     display: block;
@@ -189,7 +188,8 @@
   z-index: 10;
   position: relative;
   cursor: pointer;
-
+  padding-top: 3em;
+ 
   li:last-child {
     a {
       margin-bottom: 0;
