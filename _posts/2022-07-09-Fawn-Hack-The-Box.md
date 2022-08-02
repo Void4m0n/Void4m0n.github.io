@@ -1,7 +1,7 @@
 ---
 layout: single	
 title: <span class="htb">Fawn - <span class="starting_point">Starting point</span> - Hack The Box</span>
-excerpt: "En este write up veremos la segunda máquina del starting point tier 0, basicamente nos conectaremos por ftp mediante
+excerpt: "En este write up veremos la segunda máquina del starting point tier 0 Fawn, basicamente nos conectaremos por ftp mediante
 el login anonymous y nos descargaremos la flag en nuestro equipo."
 date: 2022-07-06
 classes: wide
@@ -20,7 +20,7 @@ tags:
 
 ## DESCRIPCION
 
-En este write up veremos la segunda máquina del starting point tier 0, basicamente nos conectaremos por ftp mediante 
+En este write up veremos la segunda máquina del starting point tier 0 *Fawn*, basicamente nos conectaremos por ftp mediante 
 el login anonymous y nos descargaremos la flag en nuestro equipo.
 
 ## INDICE

@@ -7,3 +7,5 @@ main:
     url: /categories/
   - title: "Etiquetas"
     url: /tags/
+  - title: "&#128269;"
+    url: /search/

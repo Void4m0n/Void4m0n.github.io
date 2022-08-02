@@ -1,7 +1,7 @@
 ---
 layout: single
 title: <span class="htb">Netmon - Hack The Box</span>
-excerpt: "En la máquina de hoy veremos la criticidad de una mala configuración de un servidor FTP el cual nos permitirá obtener archivos del sistema como backups de configuración, documentos, etc… 
+excerpt: "En la máquina de hoy Netmon veremos la criticidad de una mala configuración de un servidor FTP el cual nos permitirá obtener archivos del sistema como backups de configuración, documentos, etc… 
 Obtendremos las credenciales de la aplicación web a vulnerar en el archivo de configuración, y explotaremos una vulnerabilidad pública CVE-2018-9276 que nos dará RCE agregando un usuario administrador 
 en el sistema."
 date: 2022-07-27
@@ -24,7 +24,7 @@ tags:
 
 ## DESCRIPCION
 
-En la máquina de hoy veremos la criticidad de una mala configuración de un servidor FTP el cual nos permitirá obtener archivos del sistema como backups de configuración, documentos, etc...
+En la máquina de hoy *Netmon* veremos la criticidad de una mala configuración de un servidor FTP el cual nos permitirá obtener archivos del sistema como backups de configuración, documentos, etc...
 Obtendremos las credenciales de la aplicación web a vulnerar en el archivo de configuración, y explotaremos una vulnerabilidad pública CVE-2018-9276 que nos dará RCE agregando un usuario 
 administrador en el sistema.
 
