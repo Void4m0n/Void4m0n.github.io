@@ -1,6 +1,6 @@
 ---
 title: "Buscador"
-permalink: /search
+permalink: /search/
 layout: search
 author_profile: true
 ---
