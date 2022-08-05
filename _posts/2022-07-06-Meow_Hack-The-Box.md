@@ -116,7 +116,7 @@ root@Meow:~# pwd
 root@Meow:~# ls
 flag.txt  snap
 root@Meow:~# cat flag.txt 
-b40abdfe23665f766f9c61ecba8a4c19
+b40axxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ```
 Hemos explotado la primera máquina del starting point tier 0 con èxito. 

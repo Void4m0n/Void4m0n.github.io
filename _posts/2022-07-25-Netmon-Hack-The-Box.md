@@ -1,6 +1,6 @@
 ---
 layout: single
-title: <span class="htb">Netmon - Hack The Box</span>
+title: <span style="color:#e7ff39">Netmon </span><span class="htb"><span class="en_blanco">-</span> Hack The Box <span class="en_blanco">-</span> </span><span class="es_rojo">E</span><span class="es_amarillo">S</span><span class="es_rojo">P</span>
 excerpt: "En la máquina de hoy Netmon veremos la criticidad de una mala configuración de un servidor FTP el cual nos permitirá obtener archivos del sistema como backups de configuración, documentos, etc… 
 Obtendremos las credenciales de la aplicación web a vulnerar en el archivo de configuración, y explotaremos una vulnerabilidad pública CVE-2018-9276 que nos dará RCE agregando un usuario administrador 
 en el sistema."
@@ -13,6 +13,7 @@ header:
 categories:
   - Hack The Box
   - Easy
+  - Esp
 tags: 
   - Nmap 
   - CVE-2018-9276
@@ -469,7 +470,7 @@ Ya hemos conseguido comprometer la máquina, solo nos falta encontrar la root fl
 
 C:\Users\Administrator\Desktop> type root.txt
 
-321b15b5e9d378c9816a9bb756cef45f
+321bxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ```
 

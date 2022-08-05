@@ -169,5 +169,5 @@ What is username that is used over FTP when you want to log in without having an
 
 Submit root flag
 
-`035db21c881520061c53e0536e44f815 `
+`035dxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 

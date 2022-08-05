@@ -1,6 +1,6 @@
 ---
 layout: single
-title: <span class="htb">Jerry - Hack The Box</span>
+title: <span style="color:#9c5715">Jerry </span> <span class="htb"><span class="en_blanco">-</span> Hack The Box <span class="en_blanco">-</span> </span><span class="es_rojo">E</span><span class="es_amarillo">S</span><span class="es_rojo">P</span>
 excerpt: "Hoy veremos la máquina easy Jerry, la cual tiene montado un servidor web con TomCat, conseguiremos acceder al Manager App mediante la obtención de credenciales
 haciendo reconocimiento web, desplegaremos una aplicación .War que contendrá una reverse shell, dándonos acceso como administrador del sistema."
 date: 2022-07-17
@@ -12,6 +12,7 @@ header:
 categories:
   - Hack The Box
   - Easy
+  - Esp
 tags: 
   - Nmap 
   - TomCat
@@ -184,10 +185,10 @@ Directory of C:\Users\Administrator\Desktop\flags
 type "2 for the price of 1.txt"
 
 user.txt
-7004dbcef0f854e0fb401875f26ebd00
+7004xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 root.txt
-04a8b36e1545a455393d067e772fe90e
+04a8xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ```
 Pues teníamos las dos flags en el mismo archivo, podemos dar por pwneada la máquina Jerry.

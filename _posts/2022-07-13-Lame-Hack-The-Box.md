@@ -1,8 +1,8 @@
 ---
 layout: single
-title: <span class="htb">Lame - Hack The Box</span>
-excerpt: "A partir del día de hoy empezaré a realizar un write up diario de las máquinas retiradas de Hack the Box, es el turno de Lame, una máquina easy donde ganaremos acceso al sistema con permisos root 
-explotando una vulnerabilidad de samba CVE-2007-2447."
+title: <span style="color:#1d4aef">Lame </span><span style="color:white">- </span><span class="htb">Hack The Box</span><span style="color:white"> - </span><span class="es_rojo">E</span><span class="es_amarillo">S</span><span class="es_rojo">P</span>
+excerpt: "A partir del día de hoy empezaré a realizar un write up de forma periódica de las máquinas retiradas de Hack the Box, es el turno de Lame, una máquina easy donde ganaremos acceso al sistema 
+con permisos root explotando una vulnerabilidad de samba CVE-2007-2447."
 date: 2022-07-13
 classes: wide
 header:
@@ -12,6 +12,7 @@ header:
 categories:
   - Hack The Box
   - Easy
+  - Esp
 tags: 
   - Samba
   - Ftp
@@ -20,8 +21,8 @@ tags:
 
 ## DESCRIPCION
 
-A partir del día de hoy empezaré a realizar un write up diario de las máquinas retiradas de Hack the Box, es el turno de Lame, una máquina easy donde ganaremos acceso al sistema con permisos root
-explotando una vulnerabilidad de samba CVE-2007-2447.
+A partir del día de hoy empezaré a realizar un write up de forma periódica de las máquinas retiradas de Hack the Box, es el turno de Lame, una máquina easy donde ganaremos acceso al sistema 
+con permisos root explotando una vulnerabilidad de samba CVE-2007-2447.
 
 <p style="text-align:center;"><img src="../assets/images/Lame/Lame_descripcion.png"></p>
 
@@ -325,14 +326,14 @@ En este momento solo nos falta buscar las flags en sus respectivos directorios.
 
 ```zsh
 root@lame:/home/makis# cat user.txt 
-2d319f5768304c5ba18d51dae9743fc9
+2d31xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 <h4>ROOT.TXT</h4>
 
 ```zsh
 root@lame:/root# cat root.txt 
-cb7055f4b510b3c3bb5dd343d50a9e47
+cb70xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 ## CONOCIMIENTOS OBTENIDOS
 
