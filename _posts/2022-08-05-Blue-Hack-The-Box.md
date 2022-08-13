@@ -17,7 +17,7 @@ tags:
   - Nmap
   - Eternalblue
   - Ms17-10
-  - Samba
+  - Smb
   - CVE-2017-0144
 ---
 
