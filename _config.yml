@@ -93,7 +93,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : "G-802DMWEGM3"
     anonymize_ip         : false # (default)
@@ -210,6 +210,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-remote-theme
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
