@@ -8,7 +8,7 @@ classes: wide
 header:
   teaser: /assets/images/Devel/devel.png
   teaser_home_page: true
-  icon: /assets/images/hackthebox.webp
+  icon: /assets/images/hackthebox.png
 categories:
   - Hack The Box
   - Easy
@@ -34,10 +34,10 @@ msfvenom y escalaremos privilegios a través de la vulnerabilidad CVE-2011-1249 
 
 - [Reconocimiento de puertos](#escaneo-de-puertos)
 - [FTP](#ftp)
-- [Intrusion](#intrusion)
-	- [Creacion de la revshell](#crear)
+- [Intrusión](#intrusion)
+	- [Creación de la revshell](#crear)
 	- [Subir revshell por ftp](#subir)
-	- [Recibir la conexion](#conexion)
+	- [Recibir la conexión](#conexion)
 - [Escalada de privilegios](#escalada-de-privilegios)
 - [Flags](#flags)
 - [Conocimientos obtenidos](#conocimientos-obtenidos)

@@ -8,7 +8,7 @@ classes: wide
 header:
   teaser: /assets/images/Blue/Blue.png
   teaser_home_page: true
-  icon: /assets/images/hackthebox.webp
+  icon: /assets/images/hackthebox.png
 categories:
   - Hack The Box
   - Easy
