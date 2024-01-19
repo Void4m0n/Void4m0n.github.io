@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Luis Miranda Sierra"
   avatar           : "/assets/images/void4m0n.png"
-  bio              : "ASIR | eJPT | Pentester | CTF player"
+  bio              : "ASIR | eCPPT | eJPT | Pentester | CTF player"
   location         : "España"
   email            : "Miranda.sierra.luis@gmail.com"
   uri              :
@@ -130,7 +130,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : "https://www.youtube.com/channel/UCkdBKlJ8fKHrfEM1FI6YkcA"
+  youtube          : 
 
 
 # Reading Files
